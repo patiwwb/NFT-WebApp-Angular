@@ -1,0 +1,14 @@
+<div >
+    <div class="card" style="width: '18rem'">
+        <img class="card-img-top" [src]="isMinted ? imageURI : '../../../assets/img/placeholder.png'">
+        <div class="card-body">
+          <h5 *ngIf="tokenId != -1" class="card-title">ID #{{ tokenId }}</h5>
+            <button *ngIf="!isMinted" class="btn btn-primary" (click)="mintToken()">
+              Mint
+            </button>
+            <button *ngIf="isMinted" class="btn btn-secondary" (click)="getURI()">
+              Taken! Show URI
+            </button>
+        </div>
+    </div>
+ </div>

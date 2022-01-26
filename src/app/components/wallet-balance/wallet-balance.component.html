@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body>">
+     <div *ngIf="showBalance"class="alert alert-success" role="alert">
+      <h5 class="card-title">Your Balance: {{ balanceString }}</h5>
+    </div>
+     <button class="btn btn-success" (click)="getBalance()">Show My Balance</button>
+     <button *ngIf="showBalance" class="btn btn-alert" (click)="hideBalance()">Hide My Balance</button>
+    </div>
+</div>
+<!--
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Your Balance: {balance}</h5>
+      <button class="btn btn-success" (click)="getBalance()">Show My Balance</button>
+    </div>
+</div>
+-->

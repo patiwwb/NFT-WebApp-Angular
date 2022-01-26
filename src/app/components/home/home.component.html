@@ -1,0 +1,15 @@
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Web3 App</a>
+  </nav>
+
+<app-wallet-balance></app-wallet-balance>
+
+<div class="container">
+    <div *ngIf="!totalMinted" class="card" style="width: '18rem'">
+        <app-nftimage [tokenId]="-1" [getCount]="0" [contract]="contract" [signer]="signer" ></app-nftimage>
+    </div>
+    <div *ngFor="let item of [].constructor(totalMinted+1); let i = index">
+        <app-nftimage [tokenId]="i" [getCount]="totalMinted" [contract]="contract" [signer]="signer" ></app-nftimage>
+     </div>
+</div>
