@@ -1,0 +1,12 @@
+init a front end app (react,angular...)
+npx hardhat (create a contracts folder ".sol" files, create scripts folder, create test folder)
+change hardhat.config.js file to add artifacts for frontend -> it adds a ABI middleman
+npm install all needed dependencies (waffle automating testing, ethers for metamask, zeppzin for smartcontracts)
+Create our smartcontract on openzeppelin in the browser and add the .sol file into contracts folder
+change hardhat.config.js file by removing some require 
+Go to ./test/sample-test.js and test before doing frontend stuff
+Once testing is OK 
+Go to ./scripts/sample-script.js and adapt to our smartcontract
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network localhost
+create components for your frontend
